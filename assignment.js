@@ -2,11 +2,11 @@
 
 //For converting kilometer to meter
 function kilometerToMeter(kilometer){
-    if(kilometer < 0){                                      //Checking positive or not
-        return "Please enter positive value.";
+    if(kilometer < 0){                                                    //Checking positive or not
+        return "Please enter a positive value of distance.";
     }
-    else if(typeof(kilometer) != "number"){                 //Checking number type or not
-        return "Please enter number.";
+    else if(typeof(kilometer) != "number"){                              //Checking number type or not
+        return "Please enter the numeric type value of distance.";
     }
     else{
         var meter = kilometer * 1000;
@@ -18,13 +18,13 @@ function kilometerToMeter(kilometer){
 //For calculating the total cost of watch, mobile and laptop.
 function budgetCalculator(watch, phone, laptop){
     if(watch < 0 || phone < 0 || laptop < 0){
-        return "Please enter positive value.";
+        return "Please enter the positive value of the number of watches, phones, and laptops.";
     }
     else if(typeof(watch) != "number" || typeof(phone) != "number" || typeof(laptop) != "number"){          //Checking number type or not
-        return "Please enter all parameter in number type.";
+        return "Please enter the number of watches, phones, and laptops in numeric type.";
     }
     else if(Math.ceil(watch) - Math.floor(watch) != 0 || Math.ceil(phone) - Math.floor(phone) != 0 || Math.ceil(laptop) - Math.floor(laptop) != 0){    //Checking fractional or not 
-        return "Please enter Integer value.";
+        return "Please enter Integer value of the number of watches, phones, and laptops.";
     }
     else{
         var watchPrice = watch * 50;
@@ -40,13 +40,13 @@ function budgetCalculator(watch, phone, laptop){
 //For calculating total hotel cost
 function hotelCost(day){
     if(day < 0){
-        return "Please enter positive value.";
+        return "Please enter the positive value of total days.";
     }
     else if(typeof(day) != "number"){
-        return "Please enter number.";
+        return "Please enter the total days in numeric type.";
     }
-    else if(Math.ceil(day) - Math.floor(day) != 0){         //Checking fractional or not
-        return "Please enter Integer value.";
+    else if(Math.ceil(day) - Math.floor(day) != 0){              //Checking fractional or not
+        return "Please enter the Integer value of total days.";
     }
     else{
         if(day <= 10){
