@@ -1,11 +1,11 @@
-
+//  https://github.com/MuhammadRifat/Assignment3
 
 //For converting kilometer to meter
 function kilometerToMeter(kilometer){
-    if(kilometer < 0){
+    if(kilometer < 0){                                      //Checking positive or not
         return "Please enter positive value.";
     }
-    else if(typeof(kilometer) != "number"){
+    else if(typeof(kilometer) != "number"){                 //Checking number type or not
         return "Please enter number.";
     }
     else{
@@ -20,10 +20,10 @@ function budgetCalculator(watch, phone, laptop){
     if(watch < 0 || phone < 0 || laptop < 0){
         return "Please enter positive value.";
     }
-    else if(typeof(watch) != "number" || typeof(phone) != "number" || typeof(laptop) != "number"){
+    else if(typeof(watch) != "number" || typeof(phone) != "number" || typeof(laptop) != "number"){          //Checking number type or not
         return "Please enter all parameter in number type.";
     }
-    else if(Math.ceil(watch) - Math.floor(watch) != 0 || Math.ceil(phone) - Math.floor(phone) != 0 || Math.ceil(laptop) - Math.floor(laptop) != 0){
+    else if(Math.ceil(watch) - Math.floor(watch) != 0 || Math.ceil(phone) - Math.floor(phone) != 0 || Math.ceil(laptop) - Math.floor(laptop) != 0){    //Checking fractional or not 
         return "Please enter Integer value.";
     }
     else{
@@ -45,7 +45,7 @@ function hotelCost(day){
     else if(typeof(day) != "number"){
         return "Please enter number.";
     }
-    else if(Math.ceil(day) - Math.floor(day) != 0){
+    else if(Math.ceil(day) - Math.floor(day) != 0){         //Checking fractional or not
         return "Please enter Integer value.";
     }
     else{
@@ -71,19 +71,20 @@ function hotelCost(day){
     }
 }
 
+
 //For finding the largest friend name
 function megaFriend(friends){
-    if(Array.isArray(friends) == false){
+    if(Array.isArray(friends) == false){                    //For confirming Array
         return "Please enter an Array.";
     }
-    else if(friends.length == 0){
+    else if(friends.length == 0){                           //checking Array length
         return "Array is empty.";
     }
     else{
         var largeName = friends[0];
         for(var i = 0; i < friends.length; i++){
-            if(typeof(friends[i]) == "string"){
-                if(largeName.length < friends[i].length){
+            if(typeof(friends[i]) == "string"){             //checking datatype of all elements
+                if(largeName.length < friends[i].length){   //For finding the largest element
                     largeName = friends[i];
                 }
             }
@@ -95,8 +96,3 @@ function megaFriend(friends){
         return largeName;
     }
 }
-
-console.log(kilometerToMeter(10));
-console.log(budgetCalculator(10, 20, 2));
-console.log(hotelCost(30));
-console.log(megaFriend(['rifat','kazinazrul','sifat']));
